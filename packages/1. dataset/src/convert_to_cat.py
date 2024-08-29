@@ -80,7 +80,7 @@ def convert_to_coco_detection_folder(
     index = 0
     box_index = 0
     images_dir = os.listdir(images_folder_path)
-    sorted(images_dir)
+    images_dir = sorted(images_dir)
     for sample in images_dir:
         if not sample.isnumeric(): continue
 

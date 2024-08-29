@@ -14,7 +14,7 @@ from PIL import Image
 def process_dataset(dataset_path):
     image_path = f"{dataset_path}/images"
     images_dir = os.listdir(image_path)
-    sorted(images_dir)
+    images_dir = sorted(images_dir)
     for sample in images_dir:
         print(dataset_path, sample)
         sample_path = f"{image_path}/{sample}"
