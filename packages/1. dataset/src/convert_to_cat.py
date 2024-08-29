@@ -49,6 +49,15 @@ def convert_to_coco_detection_folder(
     Converts images and annotations in the folders to COCO format and saves them in the output folder.
     """
 
+    metadata_path = f"{dataset_folder_path}/metadata.jsonl"
+
+    metadata_dict = {}
+    with open(metadata_path, "r") as f:
+        for line in f:
+            metadata = eval(line)
+            metadata_dict[metadata["sample_index"]] = metadata
+    out_metadata_dict = {}
+
     sorted_categories = sorted(categories)
     categories_dict = {category: i for i, category in enumerate(sorted_categories)}
 
@@ -74,6 +83,7 @@ def convert_to_coco_detection_folder(
     images_folder_path = f"{dataset_folder_path}/images"
     target_images_folder_path = f"{output_folder_path}/images"
     target_labels_folder_path = f"{output_folder_path}/labels"
+    target_metadata_folder_path = f"{output_folder_path}/metadata"
 
     # If the output folder exists delete it
 
@@ -93,6 +103,8 @@ def convert_to_coco_detection_folder(
         image_path = f"{images_folder_path}/{sample}/Scene.png"
         target_image_path = f"{output_folder_path}/{prefix}/{prefix}_{current_index}.png"
         bbox_path = f"{images_folder_path}/{sample}/bounding_box.jsonl"
+        metadata_of_index_sample = metadata_dict.get(int(sample))
+        out_metadata_dict[f"{prefix}_{current_index}.png"] = metadata_of_index_sample
 
         # Copy image to output folder ==================
         shutil.copy(image_path, target_image_path)
@@ -172,6 +184,9 @@ def convert_to_coco_detection_folder(
                 {"images": images, "annotations": annotations, "categories": categories}
             )
         )
+    
+    with open(target_metadata_folder_path + f"/{prefix}.json", "w") as f:
+        f.write(json.dumps(out_metadata_dict))
 
 
 def get_coco_path(name):
