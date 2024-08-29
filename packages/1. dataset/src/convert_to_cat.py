@@ -224,11 +224,26 @@ def convert(name):
     #     f.write(json.dumps(trainval))
 
 
-convert("dust-0.5/train")
-convert("fog-0.5/train")
-convert("maple_leaf-0.5/train")
-convert("normal/train")
-convert("rain-0.5/train")
-convert("snow-0.5/train")
-convert("train")
-convert("test")
+convert(f"{PREFIX}data/cityenviron/aerial/dust-10/train")
+convert(f"{PREFIX}data/cityenviron/aerial/dust-100/train")
+convert(f"{PREFIX}data/cityenviron/aerial/dust-1000/train")
+
+convert(f"{PREFIX}data/cityenviron/aerial/fog-10/train")
+convert(f"{PREFIX}data/cityenviron/aerial/fog-100/train")
+convert(f"{PREFIX}data/cityenviron/aerial/fog-1000/train")
+
+convert(f"{PREFIX}data/cityenviron/aerial/maple_leaf-10/train")
+convert(f"{PREFIX}data/cityenviron/aerial/maple_leaf-100/train")
+convert(f"{PREFIX}data/cityenviron/aerial/maple_leaf-1000/train")
+
+convert(f"{PREFIX}data/cityenviron/aerial/rain-10/train")
+convert(f"{PREFIX}data/cityenviron/aerial/rain-100/train")
+convert(f"{PREFIX}data/cityenviron/aerial/rain-1000/train")
+
+convert(f"{PREFIX}data/cityenviron/aerial/snow-10/train")
+convert(f"{PREFIX}data/cityenviron/aerial/snow-100/train")
+convert(f"{PREFIX}data/cityenviron/aerial/snow-1000/train")
+
+convert(f"{PREFIX}data/cityenviron/aerial/test")
+convert(f"{PREFIX}data/cityenviron/aerial/val")
+convert(f"{PREFIX}data/cityenviron/aerial/train-10000")
