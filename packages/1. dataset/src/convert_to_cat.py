@@ -185,9 +185,7 @@ def convert_to_coco_detection_folder(
             )
         )
     
-    if os.path.exists(target_metadata_folder_path):
-        shutil.rmtree(target_metadata_folder_path)
-    os.makedirs(target_metadata_folder_path, exist_ok=True)
+    if not os.path.exists(target_metadata_folder_path): os.makedirs(target_metadata_folder_path, exist_ok=True)
     with open(target_metadata_folder_path + f"/{prefix}.json", "w") as f:
         f.write(json.dumps(out_metadata_dict))
 
