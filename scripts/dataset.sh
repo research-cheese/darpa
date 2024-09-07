@@ -15,7 +15,7 @@ python3 "packages/1. dataset/src/process_dataset.py" "rain-100" &
 python3 "packages/1. dataset/src/process_dataset.py" "rain-1000" &
 python3 "packages/1. dataset/src/process_dataset.py" "snow-10" &
 python3 "packages/1. dataset/src/process_dataset.py" "snow-100" &
-python3 "packages/1. dataset/src/process_dataset.py" "snow-1000" &
+python3 "packages/1. dataset/src/process_dataset.py" "snow-1000"
 
 
 python3 "packages/1. dataset/src/convert_to_cat.py"
