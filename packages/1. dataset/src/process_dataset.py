@@ -49,26 +49,7 @@ def process_dataset(dataset_path):
 
                 index += 1
 
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/base")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/test")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/val")
+import dataset_configs
 
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/dust-10")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/dust-100")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/dust-1000")
-
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/fog-10")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/fog-100")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/fog-1000")
-
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/maple_leaf-10")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/maple_leaf-100")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/maple_leaf-1000")
-
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/rain-10")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/rain-100")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/rain-1000")
-
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/snow-10")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/snow-100")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/snow-1000")
+for dataset in dataset_configs.airsim_datasets:
+    process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/{dataset}")

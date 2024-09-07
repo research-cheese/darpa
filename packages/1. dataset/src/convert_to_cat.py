@@ -239,27 +239,6 @@ def convert(name):
     # with open(os.path.join(output_folder_path, f"annotations/annotations_all.json"), "w") as f:
     #     f.write(json.dumps(trainval))
 
-
-convert(f"{PREFIX}base")
-convert(f"{PREFIX}dust-10")
-convert(f"{PREFIX}dust-100")
-convert(f"{PREFIX}dust-1000")
-
-convert(f"{PREFIX}fog-10")
-convert(f"{PREFIX}fog-100")
-convert(f"{PREFIX}fog-1000")
-
-convert(f"{PREFIX}maple_leaf-10")
-convert(f"{PREFIX}maple_leaf-100")
-convert(f"{PREFIX}maple_leaf-1000")
-
-convert(f"{PREFIX}rain-10")
-convert(f"{PREFIX}rain-100")
-convert(f"{PREFIX}rain-1000")
-
-convert(f"{PREFIX}snow-10")
-convert(f"{PREFIX}snow-100")
-convert(f"{PREFIX}snow-1000")
-
-convert(f"{PREFIX}test")
-convert(f"{PREFIX}val")
+import dataset_configs
+for dataset in dataset_configs.airsim_datasets:
+    convert(f"{PREFIX}{dataset}")
