@@ -2,8 +2,8 @@ source scripts/setup_dataset.sh
 source scripts/dataset.sh
 
 rm -rf ../detr/aerial
-cp -r coco/cityenviron/aerial ../detr/aerial
+cp -r coco ../darp-cheese/data
 
 cd ../detr
-source scripts/setup.sh
-source scripts/run.sh
+source setup.sh
+source train_airsim_models.sh

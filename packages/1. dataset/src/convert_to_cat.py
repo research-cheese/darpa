@@ -191,7 +191,7 @@ def convert_to_coco_detection_folder(
 
 
 def get_coco_path(name):
-    return f"coco/cityenviron/aerial/{name}"
+    return f"coco/mcai/airsim-data/mixed/{name}"
 
 
 def convert(name):
@@ -208,7 +208,7 @@ def convert(name):
     os.makedirs(f"{output_folder_path}/val2017", exist_ok=True)
 
     convert_to_coco_detection_folder(
-        dataset_folder_path=f"{PREFIX}data/cityenviron/aerial/{name}",
+        dataset_folder_path=f"{PREFIX}data/mcai/airsim-data/mixed/{name}",
         output_folder_path=get_coco_path(name),
         categories=CATEGORIES,
         prefix="train2017",
@@ -218,7 +218,7 @@ def convert(name):
     )
 
     convert_to_coco_detection_folder(
-        dataset_folder_path=f"{PREFIX}data/cityenviron/aerial/test",
+        dataset_folder_path=f"{PREFIX}data/mcai/airsim-data/mixed/test",
         output_folder_path=get_coco_path(name),
         categories=CATEGORIES,
         prefix="val2017",
@@ -240,25 +240,25 @@ def convert(name):
     #     f.write(json.dumps(trainval))
 
 
-convert(f"{PREFIX}dust-10/train")
-convert(f"{PREFIX}dust-100/train")
-convert(f"{PREFIX}dust-1000/train")
+convert(f"{PREFIX}dust-10")
+convert(f"{PREFIX}dust-100")
+convert(f"{PREFIX}dust-1000")
 
-convert(f"{PREFIX}fog-10/train")
-convert(f"{PREFIX}fog-100/train")
-convert(f"{PREFIX}fog-1000/train")
+convert(f"{PREFIX}fog-10")
+convert(f"{PREFIX}fog-100")
+convert(f"{PREFIX}fog-1000")
 
-convert(f"{PREFIX}maple_leaf-10/train")
-convert(f"{PREFIX}maple_leaf-100/train")
-convert(f"{PREFIX}maple_leaf-1000/train")
+convert(f"{PREFIX}maple_leaf-10")
+convert(f"{PREFIX}maple_leaf-100")
+convert(f"{PREFIX}maple_leaf-1000")
 
-convert(f"{PREFIX}rain-10/train")
-convert(f"{PREFIX}rain-100/train")
-convert(f"{PREFIX}rain-1000/train")
+convert(f"{PREFIX}rain-10")
+convert(f"{PREFIX}rain-100")
+convert(f"{PREFIX}rain-1000")
 
-convert(f"{PREFIX}snow-10/train")
-convert(f"{PREFIX}snow-100/train")
-convert(f"{PREFIX}snow-1000/train")
+convert(f"{PREFIX}snow-10")
+convert(f"{PREFIX}snow-100")
+convert(f"{PREFIX}snow-1000")
 
 convert(f"{PREFIX}test")
 convert(f"{PREFIX}val")
