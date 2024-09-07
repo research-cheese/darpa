@@ -51,6 +51,9 @@ def process_dataset(dataset_path):
                 index += 1
 
 import dataset_configs
+import argparse
 
-for dataset in dataset_configs.airsim_datasets:
-    process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/{dataset}")
+parser = argparse.ArgumentParser()
+parser.add_argument('dataset_name', type=str, help='The name of the dataset to process')
+dataset = parser.parse_args().dataset_name
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/{dataset}")
