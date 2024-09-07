@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH -N 1            # number of nodes
 #SBATCH -c 8            # number of cores 
+#SBATCH --gpus=2        # number of GPUs
 #SBATCH -t 0-12:00:00   # time in d-hh:mm:ss
 #SBATCH -p highmem      # partition 
 #SBATCH -q public       # QOS
