@@ -71,4 +71,4 @@ process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/snow-1000")
 
 process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/test")
 process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/val")
-process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/train-10000")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/base")

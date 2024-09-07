@@ -46,7 +46,7 @@ def donkify(name):
     calebify(name, "train")
     calebify(name, "val")
 
-donkify("train-10000")
+donkify("base")
 donkify("test")
 donkify("val")
 donkify("dust-10")
