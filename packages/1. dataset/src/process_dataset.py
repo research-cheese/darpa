@@ -26,6 +26,7 @@ def process_dataset(dataset_path):
         if os.path.exists(ground_truth_path) and os.path.exists(saved_bounding_box_path): continue
 
         if os.path.exists(saved_bounding_box_path): os.remove(saved_bounding_box_path)
+        if os.path.exists(ground_truth_path): shutil.rmtree(ground_truth_path)
         os.makedirs(ground_truth_path)
 
         for colors, color_name, group_disjoint, min_count in [
