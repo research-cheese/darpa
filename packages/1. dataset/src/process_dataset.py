@@ -21,10 +21,10 @@ def process_dataset(dataset_path):
         segmentation_path = f"{sample_path}/Segmentation.png"                
 
         ground_truth_path = f"{sample_path}/ground_truth"
-        if os.path.exists(ground_truth_path): 
-            continue
-
         saved_bounding_box_path = f"{sample_path}/bounding_box.jsonl"
+
+        if os.path.exists(ground_truth_path) and os.path.exists(saved_bounding_box_path): continue
+
         if os.path.exists(saved_bounding_box_path): os.remove(saved_bounding_box_path)
         os.makedirs(ground_truth_path)
 
