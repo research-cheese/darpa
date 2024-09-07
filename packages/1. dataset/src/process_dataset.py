@@ -49,26 +49,26 @@ def process_dataset(dataset_path):
 
                 index += 1
 
-process_dataset(f"{PREFIX}data/cityenviron/aerial/dust-10/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/dust-100/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/dust-1000/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/dust-10/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/dust-100/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/dust-1000/train")
 
-process_dataset(f"{PREFIX}data/cityenviron/aerial/fog-10/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/fog-100/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/fog-1000/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/fog-10/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/fog-100/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/fog-1000/train")
 
-process_dataset(f"{PREFIX}data/cityenviron/aerial/maple_leaf-10/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/maple_leaf-100/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/maple_leaf-1000/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/maple_leaf-10/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/maple_leaf-100/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/maple_leaf-1000/train")
 
-process_dataset(f"{PREFIX}data/cityenviron/aerial/rain-10/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/rain-100/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/rain-1000/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/rain-10/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/rain-100/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/rain-1000/train")
 
-process_dataset(f"{PREFIX}data/cityenviron/aerial/snow-10/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/snow-100/train")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/snow-1000/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/snow-10/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/snow-100/train")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/snow-1000/train")
 
-process_dataset(f"{PREFIX}data/cityenviron/aerial/test")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/val")
-process_dataset(f"{PREFIX}data/cityenviron/aerial/train-10000")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/test")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/val")
+process_dataset(f"{PREFIX}data/mcai/airsim-data/mixed/train-10000")
