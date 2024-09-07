@@ -11,7 +11,7 @@ def calebify(name, prefix):
     output_images_path = f"{output_path}"
 
     if os.path.exists(output_path): shutil.rmtree(output_path)
-    shutil.copytree(input_images_path, output_images_path, dirs_exist_ok=True)
+    shutil.copytree(input_images_path, output_images_path)
 
     annotations = json.load(open(input_annotations_path, 'r'))
     annotation_images = annotations['images']
