@@ -240,6 +240,7 @@ def convert(name):
     #     f.write(json.dumps(trainval))
 
 
+convert(f"{PREFIX}base")
 convert(f"{PREFIX}dust-10")
 convert(f"{PREFIX}dust-100")
 convert(f"{PREFIX}dust-1000")
@@ -262,4 +263,3 @@ convert(f"{PREFIX}snow-1000")
 
 convert(f"{PREFIX}test")
 convert(f"{PREFIX}val")
-convert(f"{PREFIX}base")
