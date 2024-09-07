@@ -1,3 +1,5 @@
+#!/bin/sh
+
 source scripts/setup_dataset.sh
 source scripts/dataset.sh
 
