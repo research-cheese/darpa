@@ -47,7 +47,6 @@ def process_dataset(dataset_path):
                 with open(saved_bounding_box_path, "a") as f:
                     f.write(json.dumps({"class": color_name, **t.bounding_box.__dict__}))
                     f.write("\n")
-                    print({"class": color_name, **t.bounding_box.__dict__})
 
                 index += 1
 
