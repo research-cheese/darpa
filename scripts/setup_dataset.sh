@@ -4,3 +4,4 @@ source ./dataset_venv/bin/activate
 pip install pillow 
 pip install matplotlib
 pip install scikit-image
+pip install numpy

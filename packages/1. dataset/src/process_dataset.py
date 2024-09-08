@@ -10,6 +10,20 @@ from utils.core.config import PREFIX
 
 import matplotlib.pyplot as plt
 from PIL import Image
+import numpy as np
+
+def has_colors(image_path, colors):
+    return all([has_color(image_path, color) for color in colors])
+
+def has_color(image_path, color):
+    image = Image.open(image_path)
+    image = image.convert("RGB")
+    image = np.asarray(image)
+    for row in image:
+        for pixel in row:
+            if tuple(pixel) == color:
+                return True
+    return False
 
 def process_dataset(dataset_path):
     image_path = f"{dataset_path}/images"
@@ -35,6 +49,8 @@ def process_dataset(dataset_path):
             (CONSTRUCTION_COLORS, "construction", True, 30), 
             (NATURE_COLORS, "nature", False, 50)]:
 
+            if not has_colors(segmentation_path, colors) or os.path.exists(f"{ground_truth_path}/{color_name}"): continue
+            
             truth = get_ground_truth(segmentation_path, colors, group_disjoint=group_disjoint, min_count=min_count)
 
             index = 0
