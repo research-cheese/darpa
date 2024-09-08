@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -N 1            # number of nodes
-#SBATCH -c 4            # number of cores 
+#SBATCH -c 1            # number of cores 
 #SBATCH -G 1            # number of cores 
 #SBATCH -t 1-00:00:00   # time in d-hh:mm:ss
 #SBATCH -p highmem      # partition 
