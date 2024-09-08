@@ -1,3 +1,11 @@
+python3 "packages/1. dataset/src/dumb_thread.py" "base" 0 &
+python3 "packages/1. dataset/src/dumb_thread.py" "base" 2000 &
+python3 "packages/1. dataset/src/dumb_thread.py" "base" 4000 &
+python3 "packages/1. dataset/src/dumb_thread.py" "base" 6000 &
+python3 "packages/1. dataset/src/dumb_thread.py" "base" 8000 &
+python3 "packages/1. dataset/src/dumb_thread.py" "base" 10000
+
+
 python3 "packages/1. dataset/src/process_dataset.py" "base" &
 python3 "packages/1. dataset/src/process_dataset.py" "test" &
 python3 "packages/1. dataset/src/process_dataset.py" "val" &
