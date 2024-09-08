@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -N 1            # number of nodes
-#SBATCH -c 4            # number of cores 
+#SBATCH -c 8            # number of cores 
 #SBATCH -G 1            # number of cores 
 #SBATCH -t 1-00:00:00   # time in d-hh:mm:ss
-#SBATCH -p highmem      # partition 
+#SBATCH -p general      # partition 
 #SBATCH -q public # queue
 #SBATCH -o slurms/slurm.%j.out # file to save job's STDOUT (%j = JobId)
 #SBATCH -e slurms/slurm.%j.err # file to save job's STDERR (%j = JobId)
