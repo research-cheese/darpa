@@ -7,7 +7,7 @@ python3 "packages/1. dataset/src/dumb_thread.py" "base" 5000 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 6000 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 7000 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 8000 &
-python3 "packages/1. dataset/src/dumb_thread.py" "base" 9000 &
+python3 "packages/1. dataset/src/dumb_thread.py" "base" 9000
 
 
 python3 "packages/1. dataset/src/process_dataset.py" "base" &
