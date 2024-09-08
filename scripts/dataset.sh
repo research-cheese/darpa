@@ -21,7 +21,7 @@ python3 "packages/1. dataset/src/dumb_thread.py" "base" 9500 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 10000 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 10500 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 11000 &
-python3 "packages/1. dataset/src/dumb_thread.py" "base" 11500 &
+python3 "packages/1. dataset/src/dumb_thread.py" "base" 11500
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 12000 
 
 
