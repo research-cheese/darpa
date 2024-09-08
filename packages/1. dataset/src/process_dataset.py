@@ -50,7 +50,6 @@ def process_dataset(dataset_path):
 
                 index += 1
 
-import dataset_configs
 import argparse
 
 parser = argparse.ArgumentParser()
