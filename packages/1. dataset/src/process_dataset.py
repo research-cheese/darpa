@@ -28,6 +28,7 @@ def process_dataset(dataset_path):
         if os.path.exists(ground_truth_path): shutil.rmtree(ground_truth_path)
         os.makedirs(ground_truth_path)
 
+        to_save = ""
         for colors, color_name, group_disjoint, min_count in [
             (HUMAN_COLORS, "pedestrian", False, 10), 
             (VEHICLE_COLORS, "vehicle", False, 30), 
@@ -43,12 +44,12 @@ def process_dataset(dataset_path):
                 
                 saved_segmentation_path = f"{ground_truth_sample_path}/segmentation.png"
                 # save_black_and_white_image(t.segmentation, saved_segmentation_path)
-
-                with open(saved_bounding_box_path, "a") as f:
-                    f.write(json.dumps({"class": color_name, **t.bounding_box.__dict__}))
-                    f.write("\n")
+                to_save += json.dumps({"class": color_name, **t.bounding_box.__dict__}) + "\n"
+        
 
                 index += 1
+        with open(saved_bounding_box_path, "w") as f:
+            f.write(to_save)
 
 import argparse
 
