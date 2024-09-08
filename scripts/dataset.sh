@@ -1,4 +1,3 @@
-python3 "packages/1. dataset/src/dumb_thread.py" "base" 0 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 2000 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 4000 &
 python3 "packages/1. dataset/src/dumb_thread.py" "base" 6000 &
